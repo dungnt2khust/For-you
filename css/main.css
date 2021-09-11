@@ -11,19 +11,19 @@
     background: url('../assets/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -20px -20px;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    animation: 5s linear backgroundAnimation infinite;
+    animation: 4s linear backgroundAnimation infinite;
 }
 
 .message-center {
-    font-size: 90px;
+    font-size: 100px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: darkgoldenrod;
-    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+    color: rgb(253, 27, 197, 0.6);
+    text-shadow: 5px 5px rgba(216, 103, 201, 0.5);
 }
 
 .button {
@@ -51,22 +51,28 @@
 
 @keyframes backgroundAnimation {
     0% {
-        background-position: -20px -20px;
+        background-position: 5px 0px;
     } 
-    20% {
-        background-position: -20px -10px;
+    15% {
+        background-position: 5px 5px;
     }
-    40% {
-        background-position: -10px -10px;
+    30% {
+        background-position: 0px 5px;
+    }
+    45% {
+        background-position: -5px 5px;
     }
     60% {
-        background-position: -10px -30px;
+        background-position: -5px 0px;
     }
-    80% {
-        background-position: 10px -10px;
+    75% {
+        background-position: 0px -5px;
+    }
+    85% {
+        background-position: -5px 0px;
     }
     100% {
-        background-position: -20px -20px;
+        background-position: 5px 0px;
     }
 }
 
@@ -75,6 +81,6 @@
 @media only screen and (max-width: 500px) {
     .message-center {
         font-size: 40px;
-        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+        text-shadow: 2px 2px rgba(187, 50, 164, 0.5);
     } 
 }
