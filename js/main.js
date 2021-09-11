@@ -8,32 +8,32 @@ var width = window.innerWidth;
 button.addEventListener('mousedown', () => { 
     switch(count) {
         case 0: 
-            randomButton();
             button.innerText = 'Ơ kìa hụt rồi. Lại đi.';
+            randomButton();
             break;
         case 1: 
-            randomButton();
             button.innerText = 'Sắp được rồi đấy cố lên nào';
+            randomButton();
             break;
         case 2:
-            randomButton();
             button.innerText = 'Ơ kìa còn một tý thôi kìa'; 
+            randomButton();
             break; 
         case 3:
-            randomButton();
             button.innerText = 'Ui suýt trúng';
+            randomButton();
             break;
         case 4: 
-            randomButton();
             button.innerText = 'Em mệt chưa :)';
+            randomButton();
             break;
         case 5: 
-            randomButton();
             button.innerText = 'Rồi anh cho bé yêu bấm nhá';
+            randomButton();
             break;
         case 6:
-            randomButton();
             button.innerText = 'Đây cho thật này. Uy tín nuônnn ^^';
+            randomButton();
             break;
     }
     count++;
@@ -47,23 +47,17 @@ function randomButton() {
     // Curr size
     var sizeHeight = button.offsetHeight;
     var sizeWidth = button.offsetWidth;
-    // console.log(width, sizeWidth, randomWidth);
-    // // Check out of window
-    // // Width
-    // if (randomWidth < sizeWidth) {
-    //     randomWidth = sizeWidth;
-    // }
-    // else if (randomWidth + sizeWidth > width) {
-    //     randomWidth = width - sizeWidth;
-    //     console.log(randomWidth);
-    // }
-    // // Height
-    // if (randomHeight < sizeHeight) {
-    //     randomHeight = sizeHeight;
-    // }
-    // else if (randomHeight + sizeHeight > height) {
-    //     randomHeight = height - sizeHeight;
-    // }
+    console.log(width, sizeWidth, randomWidth);
+    // Check out of window
+    // Width 
+    if (randomWidth + sizeWidth > width) {
+        randomWidth = width - sizeWidth;
+        console.log(randomWidth);
+    }
+    // Height 
+    if (randomHeight + sizeHeight > height) {
+        randomHeight = height - sizeHeight;
+    }
 
     button.style.transform = 'translate(0, 0)';
     button.style.left = randomWidth + 'px';
