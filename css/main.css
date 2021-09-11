@@ -6,7 +6,6 @@
 }
 
 #app {
-    position: relative;
     width: 100vw;
     height: 100vh;
     background: url('../assets/background.jpg');
@@ -28,7 +27,7 @@
 }
 
 .button {
-    position: absolute;
+    position: fixed;
     top: calc(50% + 100px);
     left: 50%;
     transform: translate(-50%, -50%);
