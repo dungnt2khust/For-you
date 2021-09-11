@@ -32,7 +32,7 @@ button.addEventListener('mousedown', () => {
             randomButton();
             break;
         case 6:
-            button.innerText = 'Đây cho thật này. Uy tín nuônnn ^^';
+            button.innerText = 'Thôi không trêu nữa này. Bấm nào ^^';
             randomButton();
             break;
     }
@@ -47,7 +47,6 @@ function randomButton() {
     // Curr size
     var sizeHeight = button.offsetHeight;
     var sizeWidth = button.offsetWidth;
-    console.log(width, sizeWidth, randomWidth);
     // Check out of window
     // Width 
     if (randomWidth + sizeWidth > width) {
