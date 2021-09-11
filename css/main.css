@@ -1,0 +1,33 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    width: 100%;
+    height: 100vh;
+    background: url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-center {
+    font-size: 90px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkgoldenrod;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+    Báo cáo chi tiết là gì:
+    * Kết quả thấp là bao nhiêu ? Thông số cụ thể: trong tuần vừa rồi, tháng vừa rồi.
+    * 
+
+
+
+*/
