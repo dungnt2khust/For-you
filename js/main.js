@@ -42,7 +42,7 @@ button.addEventListener('mousedown', () => {
 
 function randomButton() {
     // Random position
-    var randomHeight = Math.floor(Math.random() * (height));
+    var randomHeight = Math.floor(Math.random() * (height - 100));
     var randomWidth = Math.floor(Math.random() * (width));
     // Curr size
     var sizeHeight = button.offsetHeight;
