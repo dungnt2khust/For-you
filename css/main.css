@@ -6,15 +6,17 @@
 }
 
 #app {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background: url('../assets/background.jpg');
-    background-size: 120%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: -20px -20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     animation: 5s linear backgroundAnimation infinite;
 }
 
@@ -23,6 +25,29 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: darkgoldenrod;
     text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(248, 66, 157);
+    color: #fff;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 550;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+.button:hover {
+    background-color: rgba(255, 105, 180, 0.938);
+}
+.button:active { 
+    background-color: rgb(250, 58, 154);
 }
 
 @keyframes backgroundAnimation {
@@ -44,4 +69,13 @@
     100% {
         background-position: -20px -20px;
     }
+}
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 500px) {
+    .message-center {
+        font-size: 30px;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    } 
 }
