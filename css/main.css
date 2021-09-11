@@ -6,14 +6,16 @@
 }
 
 #app {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: url('../assets/background.jpg');
-    background-size: cover;
+    background-size: 120%;
     background-repeat: no-repeat;
+    background-position: -20px -20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: 5s linear backgroundAnimation infinite;
 }
 
 .message-center {
@@ -23,11 +25,23 @@
     text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* 
-    Báo cáo chi tiết là gì:
-    * Kết quả thấp là bao nhiêu ? Thông số cụ thể: trong tuần vừa rồi, tháng vừa rồi.
-    * 
-
-
-
-*/
+@keyframes backgroundAnimation {
+    0% {
+        background-position: -20px -20px;
+    } 
+    20% {
+        background-position: -20px -10px;
+    }
+    40% {
+        background-position: -10px -10px;
+    }
+    60% {
+        background-position: -10px -30px;
+    }
+    80% {
+        background-position: 10px -10px;
+    }
+    100% {
+        background-position: -20px -20px;
+    }
+}
