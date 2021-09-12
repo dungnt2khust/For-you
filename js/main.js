@@ -8,6 +8,7 @@ var alphabet = ['A', 'B', 'C', 'D'];
 var quiz = [
 	{
 		question: "Em bé yêu anh hong ?",
+		result: 1,
 		answers: ["Dạ có", "Yêu ối dồi ôi nuôn", "Đừng nói gì nữa. Moahh", "Hong"],
 	},
 ];
@@ -82,13 +83,21 @@ function randomButton() {
 }
 /**
  * Tạo ra một câu hỏi từ danh sách
- * @param {Number} index 
+ * @param {Number} idx 
  * CreatedBy: NTDUNG (11/09/2021)
  */
-function makeQuestion(index) {
-    this.createQuestionElement(quiz[index].question);
-    quiz[index].answers.forEach((answer, index) => {
-        this.createAnswerElement(`${this.alphabet[index]}. ${answer}`);
+function makeQuestion(idx) {
+    this.createQuestionElement(quiz[idx].question);
+    quiz[idx].answers.forEach((answer, index) => {
+        let answerElement = this.createAnswerElement(`${this.alphabet[index]}. ${answer}`);
+		answerElement.addEventListener('click', () => {
+			if (quiz[idx].result == index) {
+				confirm('Correct');
+			}
+			else {
+				confirm('Wrong');
+			}
+		})
     });
 }
 /**
@@ -114,4 +123,5 @@ function createAnswerElement(text) {
     node.appendChild(textnode);
     node.classList.add('quiz__answer');
     document.querySelector(".quiz").appendChild(node); 
+	return node;
 }
